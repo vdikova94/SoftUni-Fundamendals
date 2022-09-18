@@ -1,0 +1,18 @@
+function repeatChar(data) {
+    let array = data.split("");
+    let newArray = [];
+
+    for (let i = 0; i < array.length; i++) {
+        let element = array[i];
+        if (element === array[i - 1]) {
+            continue;
+        } else {
+            newArray.push(element);
+        }
+    }
+    let charNotRepeat = newArray.join("");
+    console.log(charNotRepeat);
+}
+repeatChar('aaaaabbbbbcdddeeeedssaa'); //премахва само съседни повторения
+console.log("---------------------------");
+repeatChar('qqqwerqwecccwd')
